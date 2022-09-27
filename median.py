@@ -1,4 +1,7 @@
 """Median calculator."""
+"""ENTER YOUR SOLUTION HERE!"""
+
+from operator import index
 
 def getMedian(listOfNumbers):
     result = 0
@@ -12,5 +15,12 @@ def getMedian(listOfNumbers):
         result = (listOfNumbers[indexOfFirstMiddleNumber] + listOfNumbers[indexOfFirstMiddleNumber + 1]) / 2
     return result
 
-
-
+while True:
+    try:
+        print("Enter a list of numbers separated by commas: ")
+        numbers = [float(value) for value in input().split(",")]
+    except ValueError:
+        print("Some input could not be converted to a number!")
+    else:
+        break
+print(getMedian(numbers))
